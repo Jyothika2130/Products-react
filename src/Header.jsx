@@ -17,7 +17,7 @@ const Header = () => {
         }}
       >
         
-        <Link to={'/admin'} style={{ fontSize: "26px" ,color:"wheat" ,textDecoration:"none"}}>🔐 Admin Panel</Link>
+        <Link to={'/login'} style={{ fontSize: "26px" ,color:"wheat" ,textDecoration:"none"}}>🔐 Admin Panel</Link>
 
         
         <Link to={'/'} style={{ fontSize: "26px" ,color:"wheat" ,textDecoration:"none",marginLeft:'30px'}}>

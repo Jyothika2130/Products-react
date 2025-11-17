@@ -8,7 +8,7 @@ const Admin = () => {
   const [products, setProducts] = useState([]);
   const [editId, setEditId] = useState(null);
 
-  // Load products on mount
+ 
   useEffect(() => {
     const fetchProducts = async () => {
       let res = await getData();
@@ -17,21 +17,20 @@ const Admin = () => {
     fetchProducts();
   }, []);
 
-  // Add product
+  
   const handleAdd = async () => {
     if (!title || !price || !thumbnail) return alert("All fields are required!");
 
     const reqBody = { title, price: Number(price), thumbnail };
     const res = await createData(reqBody);
 
-    // Add product to state
+
     setProducts((prev) => [...prev, res.data || { ...reqBody, id: Date.now() }]);
     setTitle("");
     setPrice("");
     setThumbnail("");
   };
 
-  // Update product
   const handleUpdate = async () => {
     if (!title || !price || !thumbnail) return alert("All fields are required!");
 
